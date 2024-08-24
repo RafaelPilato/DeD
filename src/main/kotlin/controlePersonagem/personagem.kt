@@ -15,5 +15,8 @@ class personagem (
     var carisma: Int,
     var vida: Int
 ){
+    fun valorBonus(){
+        this.racaPersonagem.aplicarBonus(this)
+    }
 
 }

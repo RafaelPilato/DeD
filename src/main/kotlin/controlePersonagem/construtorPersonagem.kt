@@ -87,7 +87,7 @@ fun construirPersonagem(): personagem {
             if(indiceHabilidade != 7) {
 
                 println("\nVocê pode upar os valores para 9, 10, 11, 12, 13, 14 e 15")
-                print("\nPara qual valor deseja upar?")
+                print("\nPara qual valor deseja upar? ")
                 var valorHabilidade = readLine()?.toIntOrNull()?:0
 
                 var custo: Int = 0
@@ -127,6 +127,31 @@ fun construirPersonagem(): personagem {
 
 
     var Personagem = personagem(nome, Raca, 1, 0.0, forca, destreza, constituicao, inteligencia, sabedoria, carisma, 10)
+
+    Personagem.valorBonus()
+
+    var modificador : Int = 0
+
+    when(Personagem.constituicao){
+        1 -> modificador = -5
+        2, 3 -> modificador = -4
+        4, 5  -> modificador = -3
+        6, 7  -> modificador = -2
+        8, 9  -> modificador = -1
+        10, 11  -> modificador = 0
+        12, 13 -> modificador = 1
+        14, 15 -> modificador = 2
+        16, 17 -> modificador = 3
+        18, 19 -> modificador = 4
+        20, 21 -> modificador = 5
+        22, 23 -> modificador = 6
+        24, 25 -> modificador = 7
+        26, 27 -> modificador = 8
+        28, 29 -> modificador = 9
+        30 -> modificador = 10
+    }
+
+    Personagem.vida += modificador
 
     return Personagem
 }
