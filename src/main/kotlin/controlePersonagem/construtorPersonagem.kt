@@ -32,7 +32,7 @@ fun construirPersonagem(): personagem {
     var indiceRaca = readLine()?.toIntOrNull()?:0
 
     while(indiceRaca < 1 || indiceRaca > 17){
-        println("\nÍndice errado, tente novamente!")
+        println("\nÍndice errado. Tente novamente!")
         print("\nInsira o índice da raça desejada: ")
         indiceRaca = readLine()?.toIntOrNull()?:0
     }
