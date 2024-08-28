@@ -29,8 +29,13 @@ fun construirPersonagem(): personagem {
     println("-----------------")
 
     print("Insira o índice da raça desejada: ")
-    val indiceRaca = readLine()?.toIntOrNull()?:0
+    var indiceRaca = readLine()?.toIntOrNull()?:0
 
+    while(indiceRaca < 1 || indiceRaca > 17){
+        println("\nÍndice errado, tente novamente!")
+        print("\nInsira o índice da raça desejada: ")
+        indiceRaca = readLine()?.toIntOrNull()?:0
+    }
     var Raca : raca
     Raca = humano()
 
