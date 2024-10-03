@@ -131,7 +131,7 @@ fun construirPersonagem(): personagem {
     } while(pontos > 0 && indiceHabilidade != 7)
 
 
-    var Personagem = personagem(nome, Raca, 1, 0.0, forca, destreza, constituicao, inteligencia, sabedoria, carisma, 10)
+    var Personagem = personagem(nome, Raca)
 
     Personagem.valorBonus()
 
