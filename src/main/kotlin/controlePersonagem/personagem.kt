@@ -2,8 +2,8 @@ package org.example.controlePersonagem
 import org.example.controlePersonagem.Racas.*
 
 class personagem (
-    val nome: String,
-    val racaPersonagem: org.example.controlePersonagem.Racas.raca,
+    var nome: String,
+    var racaPersonagem: org.example.controlePersonagem.Racas.raca,
     //val classe: Classe,
     var nivel: Int = 1,
     var xp: Double = 0.0,
@@ -20,6 +20,7 @@ class personagem (
         this.racaPersonagem.aplicarBonus(this)
     }
 
+    //Recebe o número da habilidade inserida e valida
     fun validacaoValorHabilidade(valorHabilidade: Int): Boolean {
         if(valorHabilidade < 8 || valorHabilidade > 15){
             return true
